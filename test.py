@@ -232,3 +232,38 @@ t2.start()
 
 t1.join()
 t2.join()
+
+# def factorial(n):
+#     result = 1
+#     for i in range(1, n + 1):
+#         result = result * i
+#     return result
+
+# print(factorial(5))
+
+#Fibonacci Series
+# def fibonacci(n):
+#     a = 0
+#     b = 1
+
+#     for i in range(n):
+#         print(a)
+
+#         c = a + b
+#         a = b
+#         b = c
+# fibonacci(7)
+
+
+text = "swiss"
+
+for char in text:
+    count = 0
+
+    for i in text:
+        if char == i:
+            count += 1
+
+    if count == 1:
+        print("First non-repeating character:", char)
+        break
