@@ -1,38 +1,23 @@
-# arr= [1,3,4,5,6]
+# input1=[34,6,8,97,8]
+# max_number=input1[0]
+# mini_number=input1[0]
+# for i in input1:
+#     if i> max_number:
+#         mini_number=max_number
+#         max_number=i
+#         #max_number.append(i)
+#     elif i>mini_number and max_number!=mini_number:
+#         mini_number=i
+#         #mini_number.append(i)
+# addition=max_number*mini_number
+# print(max_number)
+# print(mini_number)     
+# print(addition)
 
-# value=2
-
-# arr.insert(1,value)
-# print(arr)
-
-
-# Delete 
-
-# arr= [1,3,4,5,6]
-
-# arr.remove(3)
-# print(arr)
-
-# # pop ##
-
-# arr = [10, 20, 30, 40]
-
-# removed = arr.pop(2)
-
-# print("Removed:", removed)
-# print("Updated:", arr)
-
-# arr = [1, 2, 2, 3, 4, 4, 5]
-
-# arr = list(set(arr))
-
-# print(arr)
-
-
-def numbers():
-    yield 1
-    yield 2
-    yield 3
-
-for num in numbers():
-    print(num)
+values=[1,2,4,5,7,9,6,4,3,6,2,5]
+for i in values:
+    count=0
+    for j in values:
+        if i==j:
+            count=count+1
+    print(f"{i}count:{count}")
