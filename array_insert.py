@@ -14,10 +14,16 @@
 # print(mini_number)     
 # print(addition)
 
-values=[1,2,4,5,7,9,6,4,3,6,2,5]
+values=[1,2,4,5,7,9,6,4,3,6,1,2,5]
+value=[]
 for i in values:
-    count=0
-    for j in values:
-        if i==j:
-            count=count+1
-    print(f"{i}count:{count}")
+    if i not in value:
+       count=0
+       for j in values:
+          if i==j:               
+             count=count+1
+       print(f"{i}count:{count}")
+       value.append(i)
+
+
+    

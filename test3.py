@@ -1,32 +1,23 @@
-# def alpha(char):
-#     character=list(char)
+class Solution(object):
+    def addTwoNumbers(self, l1, l2):
 
-#     for i in range(len(character)):
-#         for j in range(i+1, len(character)):
-#             if character[i]>character[j]:
-#                 tem=character[i]
-#                 character[i]=character[j]
-#                 character[j]=tem
-#     print("".join (character))
-# val=input("ENTER THE VALUE")
-# alpha(val)
+        values = []
+        carry = 0
 
+        for i in range(len(l1)):
+            total = l1[i] + l2[i] + carry
 
-class BankAccount:
+            values.append(total % 10)
+            carry = total // 10
 
-    def __init__(self, balance):
-        self.__balance = balance
+        if carry:
+            values.append(carry)
 
-    def deposit(self, amount):
-        if amount > 0:
-            self.__balance += amount
-
-    def get_balance(self):
-        return self.__balance
+        return values
 
 
-account = BankAccount(1000)
+l1 = [2, 4, 3]
+l2 = [5, 6, 4]
 
-account.deposit(500)
-
-print(account.get_balance())
+obj = Solution()
+print(obj.addTwoNumbers(l1, l2))
