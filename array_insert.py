@@ -1,29 +1,45 @@
-# input1=[34,6,8,97,8]
-# max_number=input1[0]
-# mini_number=input1[0]
-# for i in input1:
-#     if i> max_number:
-#         mini_number=max_number
-#         max_number=i
-#         #max_number.append(i)
-#     elif i>mini_number and max_number!=mini_number:
-#         mini_number=i
-#         #mini_number.append(i)
-# addition=max_number*mini_number
-# print(max_number)
-# print(mini_number)     
-# print(addition)
+# class Solution(object):
+#     def removeDuplicates(self, nums):
 
-values=[1,2,4,5,7,9,6,4,3,6,1,2,5]
-value=[]
-for i in values:
-    if i not in value:
-       count=0
-       for j in values:
-          if i==j:               
-             count=count+1
-       print(f"{i}count:{count}")
-       value.append(i)
+#         num=[]
+#         unique=[]
+#         count=0
+#         counting=0
+#         for i in nums:
+            
+#             counting=counting+1
+#             i=int(i)
+#             if i not in num:
+#                 num.append(i)
+#                 count=count+1
+#         if counting == count:
+#             print(num)
+#         else:
+#             values = counting - count 
+#             num.extend(['_'] * values)
+#             print(str(num).replace("'_'","_"))
+# nums=input("enter the number").split()
+# obj=Solution()
+# obj.removeDuplicates(nums)
 
+                
 
-    
+# class Solution(object):
+#     def removeDuplicates(self, nums):
+
+#         num = []
+#         count = 0
+
+#         for i in nums:
+#             if i not in num:
+#                 num.append(i)
+#                 count = count + 1
+count=3
+num=[1,2,3]
+nums=[1,2,3,2,3]
+
+for i in range(count):
+    nums[i] = num[i]
+
+print(count)
+
