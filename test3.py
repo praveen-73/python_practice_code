@@ -1,10 +1,27 @@
-numbers = [2, 4, 3, 5, 7, 8, 1]
-target = 9
-# Expected output: (2, 7), (4, 5), (8, 1)
-se=[]
-for i in range(len(numbers)):
-    for j in range(i + 1,len(numbers)):
-        if numbers[i] + numbers[j]==target:
-            se.append((numbers[i],numbers[j]))
-print(se)
-   
+
+
+Input = ["eat", "tea", "tan", "ate", "nat", "bat", "tab", "cab"]
+
+string = []
+visited = []
+
+for i in Input:
+    if i not in visited:
+        temp = []
+        for j in Input:
+            if len(i) == len(j):
+                count = 0
+
+                for a in i:
+                    for b in j:
+                        if a == b:
+                            count += 1
+                            break
+
+                if count == len(i):
+                    temp.append(j)
+                    visited.append(j)
+
+        string.append(temp)
+
+print(string)
